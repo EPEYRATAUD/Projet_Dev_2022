@@ -55,3 +55,21 @@ Difficulté : **5 points**
   soit : Difficulté : _3 points ( pas faire)_
   une IHM pour pouvoir jouer
   une CLI avec IA
+
+A FINIR
+| Points Attribués | Points attendus | Fonctionnalités |
+| :--------------- | :-------------: | -------------------------------: |
+| 6 | 6 | Réseau local entre deux machines |
+| 3 | 3 | Base de données |
+| 3 | 38 | Réseau local entre deux machines |
+| 2 | 38 | Réseau local entre deux machines |
+| 1 | 38 | Réseau local entre deux machines |
+| 1 | 38 | Réseau local entre deux machines |
+| 1 | 38 | Réseau local entre deux machines |
+| 3 | 38 | Réseau local entre deux machines |
+| 5 | 38 | Réseau local entre deux machines |
+| 0 | 38 | Réseau local entre deux machines |
+| 5 | 38 | Réseau local entre deux machines |
+| 2 | 38 | Réseau local entre deux machines |
+| 3 | 38 | Réseau local entre deux machines |
+| 30 | 38 | Total |
