@@ -14,9 +14,9 @@
 
 > **But du projet :** Créer un jeu 1 v 1 basé sur une combinaison de nombre a trouver, le nombre est généré aléatoirement par le programme , pousser le jeu avec d'autre fonctionnalités ( ajout d'objet qui vont interagir dans le jeu : bonus ou malus)
 
-> **Langage** : C# / autres langages ( Python?)
+> **Langage** : C# / autres langages
 
-> **BDD :** pour gestion profil joueur + bonus malus sous forme d'objet qui vont intéragir dans le jeu, en MySQL ( Wamp / XAMPP)
+> **BDD :** pour gestion profil joueur + bonus malus sous forme d'objet qui vont intéragir dans le jeu, en MySQL
 
 ## 2/ Difficultés
 
