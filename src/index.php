@@ -15,33 +15,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Accueil</title>
 </head>
 <body>
-    <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-    </div>
-    <h1>The mystery game</h1>
+    <?php include 'header.php';?>
 
-    <?php 
+    <h1>The mystery game</h1>
+    <?php
         if($sUsername != null) {
-            echo "Salut, tu es connecté en tant que ", $sUsername; ?>
+            echo "Tu es connecté en tant que ", $sUsername; ?>
             <a href="logout.php">Se déconnecter</a>
     <?php
         } else {
-            echo "T pas co gang"; ?>
-            <a href="login.php">Login</a>
+            echo "Tu n'es pas connecté."; ?>
+            <a href="login.php">Se connecter !</a>
     <?php   
     
         }
     ?>
-
-
-
-
-
 </body>
 </html>

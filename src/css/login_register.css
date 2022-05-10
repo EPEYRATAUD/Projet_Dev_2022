@@ -1,0 +1,78 @@
+/************ FORM LOGIN & REGISTER ************/
+
+.login_form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.login_form p {
+  color: white;
+  text-decoration: none;
+}
+
+.login_form a {
+  color: white;
+  text-decoration: none;
+}
+
+.login_form h2 {
+  font-size: 30px;
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login_form .login_box {
+  position: relative;
+}
+
+.login_form .login_box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.submit {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background: transparent;
+  border: 3px solid #fff;
+}
+
+.submit:hover {
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  background: white;
+  border: 3px solid #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login_form p a {
+  text-decoration: underline;
+}
+
+.return-home {
+  padding-left: 50px;
+}
+
+.return-home:hover {
+  text-decoration: underline;
+}
