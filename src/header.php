@@ -1,4 +1,7 @@
 <?php 
+    if(!isset($_SESSION)) { 
+        session_start(); 
+    } 
     if (isset($_SESSION['username'])) {
         $sUsername = $_SESSION['username'];
     }
@@ -20,12 +23,12 @@
     <!-- Si l'utilisateur est connecté -->
     <?php if($sUsername != null) { ?>
         <a class="active" href="index.php">Accueil</a>
-        <a href="login.php">Se déconnecter</a>
+        <a href="logout.php">Se déconnecter</a>
         <a href="profile.php">Mon profil</a>
     <!-- Si l'utilisateur n'est pas connecté -->
     <?php } else { ?>
         <a class="active" href="index.php">Accueil</a>
-        <a href="login.php">Se connecter !</a>
+        <a href=login.php>Se connecter !</a>
         <a href="register.php">S'inscrire</a>
     <?php   
         }

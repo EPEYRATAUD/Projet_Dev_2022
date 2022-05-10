@@ -66,7 +66,9 @@
     <title>Inscription</title>
 </head>
 <body>
-<?php include 'header.php';?>
+    <?php
+    include 'header.php';
+    ?>
     <div class="login_form">
         <form method="POST" action="">
             <h2>Inscription</h2>
