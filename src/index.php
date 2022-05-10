@@ -19,19 +19,26 @@
     <title>Accueil</title>
 </head>
 <body>
+    <!-- On inclut le header -->
     <?php include 'header.php';?>
-
     <h1>The mystery game</h1>
+
+    <!-- Si l'utilisateur est connecté -->
     <?php
         if($sUsername != null) {
             echo "Tu es connecté en tant que ", $sUsername; ?>
-            <a href="logout.php">Se déconnecter</a>
+            <div>
+                <br>
+                <a href="logout.php">Se déconnecter</a>
+                <hr>
+                <a href="game.php">Jouer au jeu</a>
+            </div>
+    <!-- Si l'utilisateur n'est pas connecté -->
     <?php
         } else {
             echo "Tu n'es pas connecté."; ?>
             <a href="login.php">Se connecter !</a>
     <?php   
-    
         }
     ?>
 </body>
