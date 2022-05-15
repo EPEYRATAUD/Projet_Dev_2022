@@ -4,6 +4,8 @@
     } 
     if (isset($_SESSION['username'])) {
         $sUsername = $_SESSION['username'];
+        $sMail = $_SESSION['email'];
+        $sAvatar = $_SESSION['avatar'];
     }
     else {
         $sUsername = NULL;
