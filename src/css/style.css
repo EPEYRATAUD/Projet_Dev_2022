@@ -22,7 +22,7 @@ a:active {
 }
 
 a:hover {
-  color: gray;
+  color: rgb(4, 81, 182);
   text-decoration: underline;
 }
 
@@ -36,4 +36,9 @@ div {
 
 footer {
   text-align: center;
+}
+
+body {
+  background-image: url("https://cdn.discordapp.com/attachments/657923591656177694/976232703257088020/MPt9.gif");
+  background-repeat: repeat-x;
 }

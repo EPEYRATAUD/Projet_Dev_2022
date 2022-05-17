@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Nombre mystère</title>
+    <title>Profil | MysteryGame</title>
 </head>
 <?php 
 
@@ -24,10 +24,12 @@ $userEmail = $user['email'];
 $userPasswd = $user['password'];
 $userName = $user['username'];
 
+// Définition de l'avatar pour le profil
 if ($sessionName == 'admin') {
-  $pfp = "https://cdn.discordapp.com/attachments/758664515872096284/975541657560821760/unknown.png";
+  $pfp = "https://cdn.discordapp.com/attachments/955749155307913217/976240153846755388/unknown.png";
 } else $pfp = "https://cdn.discordapp.com/attachments/758664515872096284/975541657560821760/unknown.png";
 
+// Quand on appuie sur le bouton modifier
 if (isset($_POST['edit'])) {
   $newUser = mysqli_real_escape_string($db, $_POST['Pseudo_2']);
   $newEmail = mysqli_real_escape_string($db, $_POST['Email_2']);
@@ -35,21 +37,38 @@ if (isset($_POST['edit'])) {
   $newPass2 = mysqli_real_escape_string($db, $_POST['password_2']);
   $updatedPass = md5($newPass1);
 
+  // Vérifications au moins un champ rempli
+  if (empty($newUser) && empty($newEmail) && empty($newPass1) && empty($newPass2)) {
+    echo "Remplissez au moins un champ pour effectuer des modifications !";
+  }
+
+  // Mise à jour utilisateur
   if (!empty($newUser)) {
       $db->query("UPDATE users SET username = '".$newUser."' WHERE username = '".$sessionName."'");
       $_SESSION['username'] = $newUser;
-      header('Location:profile.php');  
+      header('Location:profile.php');
+      echo "Le nom d'utilisateur a été mis à jour !";
   }
 
+  // Mise à jour Email
   if (!empty($newEmail)) {
     $db->query("UPDATE users SET email = '".$newEmail."' WHERE username = '".$sessionName."'");
     $_SESSION['email'] = $newUser;
     header('Location:profile.php');
+    echo "L'email a été mis à jour !";
   }
 
+  // Mise à jour mot de passe
   if (!empty($newPass1 && !empty($newPass2))) {
+
+    // Vérification 2 champs remplis
+    if (empty($newPass1 || empty($newPass2))) {
+      echo "Remplissez les deux champs pour modifier le mot de passe !";
+    }
+
+    // Correspondance mot de passe
     if ($newPass1 != $newPass2) {
-      echo "Les mots de passe doivent correspondre.";
+      echo "Les mots de passe ne correspondent pas !";
     }
 
     if ($newPass1 == $userPasswd) {
@@ -59,6 +78,7 @@ if (isset($_POST['edit'])) {
     if ($newPass1 == $newPass2) {
       $db->query("UPDATE users SET Password = '".$updatedPass."' WHERE username = '".$sessionName."'");
       header('Location:profile.php');
+      echo "Le mot de passe a été mis à jour !";
     }
   }
 } 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Accueil</title>
+    <title>Accueil | MysteryGame</title>
     <link rel="stylesheet" href="css/<?php echo $joursite?>">
 </head>
 <body>
@@ -58,7 +58,7 @@
         }
     ?>
     <footer>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
         <h1>Voici la météo du jour pour la ville de :</h1>
         <img src ="https://www.prevision-meteo.ch/uploads/widget/bordeaux_1.png">
     </footer>
