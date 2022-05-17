@@ -12,4 +12,4 @@ CREATE TABLE IF NOT EXISTS users
 );
 
 INSERT INTO users (username, password, email, avatar)
-VALUES ('admin', 'admin', 'admin@mail.com', 'default.png');
+VALUES ('admin', MD5('admin'), 'admin@mail.com', 'default.png');
